@@ -35,7 +35,7 @@ const signature = async (event) => {
 </script>
 
 <template>
-  <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+  <div class="bg-white px-6 pb-24 sm:pb-32 lg:px-8">
     <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
       aria-hidden="true">
       <div
@@ -45,7 +45,7 @@ const signature = async (event) => {
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="py-3 sm:py-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" id="firma">Firma anche tu
       </h2>
-      <p class="mt-2 text-lg leading-8 text-gray-600">Basta nome, cognome ed una email.</p>
+      <p class="mt-2 text-lg leading-8 text-gray-600">Bastano nome, cognome ed una email.</p>
     </div>
     <form @submit.prevent="signature" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
       <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

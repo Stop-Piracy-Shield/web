@@ -1,4 +1,4 @@
-# Simple web front-end with Vue, Vue-Router and Vite for "Lettera aperta contro gli eccessi di Piracy Shield"
+# The Stop-Piracy-Shield - Frontend web
 
 For run a dev server with vite:
 ```
