@@ -27,7 +27,7 @@ onMounted(() => getData());
 
 <template>
   <div>
-    <h2 class="py-3 sm:py-4 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl" id="cofirmatori">Co-firmatori:</h2>
+    <h2 class="py-3 sm:py-4 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl" id="cofirmatori">Co-firmatari:</h2>
     <ul class="divide-y divide-gray-200 ">
       <li class="py-2 sm:py-3" v-for="signature in (showLess ? singatures.slice(0,maxItem) : singatures)">
         <div class="flex items-center space-x-4 rtl:space-x-reverse">
