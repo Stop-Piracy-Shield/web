@@ -83,7 +83,7 @@ const signature = async (event) => {
           </div>
           <div class="text-sm leading-6">
             <label for="privacy" class="font-medium text-gray-900">Privacy</label>
-            <p class="text-gray-500">Accetto l'<a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/privacy.txt">Informativa sulla privacy</a> e i <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/termini.txt">Termini e condizioni</a></p>
+            <p class="text-gray-500">Accetto l'<a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/privacy.pdf">Informativa sulla privacy</a></p>
           </div>
         </div>
       </div>
