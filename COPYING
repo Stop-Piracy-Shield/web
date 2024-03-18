@@ -1,5 +1,9 @@
-The Stop-Piracy-Shield - Frontend web implementation is provided under:
+The Stop-Piracy-Shield - Frontend web implementation, unless otherwise specified, is provided under:
 
         SPDX-License-Identifier: AGPL-3.0-only
+
+The src/components/Lettera.vue file and the public/ directory are provided under:
+
+        SPDX-License-Identifier: CC-BY-ND-4.0
 
 All contributions to the Stop-Piracy-Shield - Frontend web implementation are subject to this COPYING file.
