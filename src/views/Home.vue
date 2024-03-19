@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import Lettera from '../components/Lettera.vue'
 import Firma from '../components/Firma.vue'
 import Firme from '../components/Firme.vue'
@@ -7,34 +7,40 @@ import Stats from '../components/Stats.vue'
 import CustomFooter from '../components/CustomFooter.vue'
 
 const isSticky = ref(false)
+const placeholderHeight = ref(0)
+const lastScrollPosition = ref(0)
+const stickyElement = ref(null)
+
+const handleScroll = () => {
+  const windowTop = window.scrollY;
+
+  if (windowTop > 0) {
+    isSticky.value = true;
+    placeholderHeight.value = stickyElement.offsetHeight;
+  } else {
+    isSticky.value = false;
+    placeholderHeight.value = 0;
+  }
+  lastScrollPosition.value = windowTop;
+}
 
 onMounted(() => {
-  let prev_prev_window_top = 0;
-  let prev_window_top = 0;
-  let prev_time = (new Date()).getTime();
-  let prev_prev_time = (new Date()).getTime();
-  let time = (new Date()).getTime();
-
-  window.addEventListener('scroll', function () {
-    const window_top = this.scrollY;
-    time = (new Date()).getTime();
-    if (window_top === 0) {
-      isSticky.value = false;
-    } else if ((prev_window_top - window_top) / (prev_time - time) > 0 && (prev_prev_window_top - prev_window_top) / (prev_prev_time - prev_time) > 0) {
-      isSticky.value = true;
-    }
-    prev_prev_window_top = prev_window_top;
-    prev_window_top = window_top;
-    prev_prev_time = prev_time;
-    prev_time = time;
+  let debounceTimer;
+  window.addEventListener('scroll', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(handleScroll, 10);
   })
+});
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll);
 });
 
 </script>
 
 <template>
   <div class="bg-white px-6 pt-14 lg:px-8">
-    <header class="mx-auto max-w-2xl pt-2 sm:pt-16 sticky top-0 bg-white">
+    <div v-if="isSticky" :style="{ height: placeholderHeight + 'px' }"></div>
+    <header class="mx-auto max-w-2xl pt-2 sm:pt-16 sticky top-0 bg-white" ref="stickyElement">
       <div class="text-center">
         <h1 class="font-bold tracking-tight text-gray-900 transition"
           :class="[isSticky ? ['text-xl', 'sm:text-2xl', 'lg:text-3xl'] : ['text-2xl', 'sm:text-5xl', 'lg:text-6xl']]">
