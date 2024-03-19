@@ -10,6 +10,7 @@ const isSticky = ref(false)
 const placeholderHeight = ref(0)
 const lastScrollPosition = ref(0)
 const stickyElement = ref(null)
+const firma = ref(null)
 
 const handleScroll = () => {
   const windowTop = window.scrollY;
@@ -35,6 +36,10 @@ onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 
+const scrollToFirma = () => {
+  firma.value.$el.scrollIntoView({behavior: 'smooth'});
+}
+
 </script>
 
 <template>
@@ -49,7 +54,7 @@ onBeforeUnmount(() => {
         <section class="transition" :class="[isSticky ? ['py-4'] : ['py-8']]">
           <div class="mx-auto max-w-7xl transition px-4"
             :class="[isSticky ? ['sm:px-4', 'lg:px-6'] : ['sm:px-6', 'lg:px-8']]">
-            <a href="#firma"
+            <a href="#" @click="scrollToFirma"
               class="text-white rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 flex items-center justify-between flex-col"
               :class="[isSticky ? ['p-3', 'sm:py-5', 'lg:p-7', 'text-l', 'sm:text-xl', 'lg:text-2xl'] : ['p-5', 'sm:py-10', 'lg:p-15', 'text-xl', 'sm:text-2xl', 'lg:text-4xl']]">
               <div class="flex justify-between items-center">
@@ -72,7 +77,7 @@ onBeforeUnmount(() => {
     <lettera class="mx-auto max-w-2xl" id="lettera"></lettera>
     <firme class="mx-auto max-w-2xl" max-item="5"></firme>
   </div>
-  <firma class="mx-auto max-w-2xl"></firma>
+  <firma class="mx-auto max-w-2xl" ref="firma"></firma>
   <custom-footer></custom-footer>
 </template>
 
