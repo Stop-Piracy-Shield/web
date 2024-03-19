@@ -1,3 +1,37 @@
+<script setup>
+import { ref, onMounted } from 'vue'
+import Lettera from '../components/Lettera.vue'
+import Firma from '../components/Firma.vue'
+import Firme from '../components/Firme.vue'
+import Stats from '../components/Stats.vue'
+import CustomFooter from '../components/CustomFooter.vue'
+
+const isSticky = ref(false)
+
+onMounted(() => {
+  let prev_prev_window_top = 0;
+  let prev_window_top = 0;
+  let prev_time = (new Date()).getTime();
+  let prev_prev_time = (new Date()).getTime();
+  let time = (new Date()).getTime();
+
+  window.addEventListener('scroll', function () {
+    const window_top = this.scrollY;
+    time = (new Date()).getTime();
+    if (window_top === 0) {
+      isSticky.value = false;
+    } else if ((prev_window_top - window_top) / (prev_time - time) > 0 && (prev_prev_window_top - prev_window_top) / (prev_prev_time - prev_time) > 0) {
+      isSticky.value = true;
+    }
+    prev_prev_window_top = prev_window_top;
+    prev_window_top = window_top;
+    prev_prev_time = prev_time;
+    prev_time = time;
+  })
+});
+
+</script>
+
 <template>
   <div class="bg-white px-6 pt-14 lg:px-8">
     <header class="mx-auto max-w-2xl pt-2 sm:pt-16 sticky top-0 bg-white">
@@ -33,40 +67,8 @@
     <firme class="mx-auto max-w-2xl" max-item="5"></firme>
   </div>
   <firma class="mx-auto max-w-2xl"></firma>
+  <custom-footer></custom-footer>
 </template>
-
-<script setup>
-import { ref, onMounted } from 'vue'
-import Lettera from '../components/Lettera.vue'
-import Firma from '../components/Firma.vue'
-import Firme from '../components/Firme.vue'
-import Stats from '../components/Stats.vue'
-
-const isSticky = ref(false)
-
-onMounted(() => {
-  let prev_prev_window_top = 0;
-  let prev_window_top = 0;
-  let prev_time = (new Date()).getTime();
-  let prev_prev_time = (new Date()).getTime();
-  let time = (new Date()).getTime();
-
-  window.addEventListener('scroll', function () {
-    const window_top = this.scrollY;
-    time = (new Date()).getTime();
-    if (window_top === 0) {
-      isSticky.value = false;
-    } else if ((prev_window_top - window_top) / (prev_time - time)  > 0 && (prev_prev_window_top - prev_window_top) / (prev_prev_time - prev_time) > 0) {
-      isSticky.value = true;
-    }
-    prev_prev_window_top = prev_window_top;
-    prev_window_top = window_top;
-    prev_prev_time = prev_time;
-    prev_time = time;
-  })
-});
-
-</script>
 
 <style scoped>
 html {

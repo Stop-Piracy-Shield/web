@@ -20,16 +20,16 @@ const signature = async (event) => {
         'Content-Type': 'application/json',
       }
     });
-    if(response.ok) {
-      toast.success({title: "Abbiamo quasi finito",text: "Per completare la tua firma, controlla la tua casella email e clicca sul link", position: 'top-center', duration: 10000});
+    if (response.ok) {
+      toast.success({ title: "Abbiamo quasi finito", text: "Per completare la tua firma, controlla la tua casella email e clicca sul link", position: 'top-center', duration: 10000 });
     } else {
       const error = await response.json();
-      toast.error({title: "Errore",text: `Controlla i tuoi dati, c'è qualcosa che non va (${error.error})`, position: 'top-center', duration: 10000});
+      toast.error({ title: "Errore", text: `Controlla i tuoi dati, c'è qualcosa che non va (${error.error})`, position: 'top-center', duration: 10000 });
     }
     loading.value = false;
   } catch (e) {
     loading.value = false;
-    toast.error({title: "Errore",text: "Controlla i tuoi dati, c'è qualcosa che non va", position: 'top-center', duration: 10000});
+    toast.error({ title: "Errore", text: "Controlla i tuoi dati, c'è qualcosa che non va", position: 'top-center', duration: 10000 });
   }
 }
 </script>
@@ -71,7 +71,8 @@ const signature = async (event) => {
           </div>
         </div>
         <div class="sm:col-span-2">
-          <label for="org" class="block text-sm font-semibold leading-6 text-gray-900">Organizzazione / Azienda (opzionale)</label>
+          <label for="org" class="block text-sm font-semibold leading-6 text-gray-900">Organizzazione / Azienda
+            (opzionale)</label>
           <div class="mt-2.5">
             <input type="text" name="org" id="org" autocomplete="organization"
               class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
@@ -79,23 +80,27 @@ const signature = async (event) => {
         </div>
         <div class="relative flex gap-x-3 sm:col-span-2">
           <div class="flex h-6 items-center">
-            <input id="privacy" name="privacy" type="checkbox" class="h-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" required v-model="privacy">
+            <input id="privacy" name="privacy" type="checkbox"
+              class="h-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" required v-model="privacy">
           </div>
           <div class="text-sm leading-6">
             <label for="privacy" class="font-medium text-gray-900">Privacy</label>
-            <p class="text-gray-500">Accetto l'<a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/privacy.pdf">Informativa sulla privacy</a></p>
+            <p class="text-gray-500">Accetto l'<a class="font-medium text-blue-600 hover:underline"
+                href="/privacy.pdf">Informativa sulla privacy</a></p>
           </div>
         </div>
       </div>
       <div class="mt-10">
         <button type="submit" v-if="!privacy"
-          class="flex w-full justify-center rounded-md bg-indigo-300 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm" disabled>
+          class="flex w-full justify-center rounded-md bg-indigo-300 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm"
+          disabled>
           Conferma
         </button>
         <button type="submit" v-else-if="!loading"
           class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Conferma</button>
         <button type="submit" v-else-if="loading"
-          class="flex w-full justify-center rounded-md bg-indigo-300 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm" disabled>
+          class="flex w-full justify-center rounded-md bg-indigo-300 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm"
+          disabled>
           <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
             </circle>

@@ -27,9 +27,10 @@ onMounted(() => getData());
 
 <template>
   <div>
-    <h2 class="py-3 sm:py-4 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl" id="cofirmatori">Co-firmatari:</h2>
+    <h2 class="py-3 sm:py-4 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl" id="cofirmatori">Co-firmatari:
+    </h2>
     <ul class="divide-y divide-gray-200 ">
-      <li class="py-2 sm:py-3" v-for="signature in (showLess ? singatures.slice(0,maxItem) : singatures)">
+      <li class="py-2 sm:py-3" v-for="signature in (showLess ? singatures.slice(0, maxItem) : singatures)">
         <div class="flex items-center space-x-4 rtl:space-x-reverse">
           <div class="flex-1 min-w-0">
             <p class="text-sm font-medium text-gray-900 truncate ">
@@ -45,7 +46,9 @@ onMounted(() => getData());
         </div>
       </li>
     </ul>
-    <button v-if="singatures.length > maxItem && showLess" class="text-sm font-semibold leading-6 text-gray-900" @click="showLess = !showLess">Vedi tutte le firme <span aria-hidden="true">→</span></button>
-    <button v-else-if="singatures.length > maxItem" class="text-sm font-semibold leading-6 text-gray-900" @click="showLess = !showLess">Vedi solo le ultime 5 firme <span aria-hidden="true">→</span></button>     
+    <button v-if="singatures.length > maxItem && showLess" class="text-sm font-semibold leading-6 text-gray-900"
+      @click="showLess = !showLess">Vedi tutte le firme <span aria-hidden="true">→</span></button>
+    <button v-else-if="singatures.length > maxItem" class="text-sm font-semibold leading-6 text-gray-900"
+      @click="showLess = !showLess">Vedi solo le ultime 5 firme <span aria-hidden="true">→</span></button>
   </div>
 </template>
