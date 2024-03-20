@@ -1,21 +1,17 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from 'vue';
 
-const stats = ref([
-  { name: 'Firme', value: '' },
-])
+const stats = ref([{ name: 'Firme', value: '' }]);
 
 async function getData() {
   try {
-    const response = await fetch("/api/signatures");
-    const count = [...await response.json()].length;
-    stats.value = [
-      { name: 'Firme', value: count },
-    ];
+    const response = await fetch('/api/signatures');
+    const count = [...(await response.json())].length;
+    stats.value = [{ name: 'Firme', value: count }];
   } catch (e) {
-    console.error('Error: ', e)
+    console.error('Error: ', e);
   }
-};
+}
 
 onMounted(() => getData());
 </script>

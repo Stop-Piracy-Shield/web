@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,10 +10,10 @@ export default defineConfig({
     },
     proxy: {
       '/api': {
-        target: 'https://stop-piracy-shield.it/api/',
+        target: 'http://stop-piracy-shield.it/api/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },
-})
+});
