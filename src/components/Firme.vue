@@ -38,9 +38,11 @@ onMounted(() => getData());
               {{ signature.first_name }} {{ signature.last_name }}
             </p>
             <p class="text-sm font-medium text-gray-500 truncate" v-if="signature.org">
+              Affiliazione:
               {{ signature.org }}
             </p>
             <p class="text-sm text-gray-500 truncate" v-if="signature.message">
+              Messaggio:
               {{ signature.message }}
             </p>
           </div>

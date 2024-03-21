@@ -85,7 +85,15 @@ const signature = async (event) => {
       </h2>
       <p class="mt-2 text-lg leading-8 text-gray-600">Bastano nome, cognome ed una email.</p>
     </div>
-    <form @submit.prevent="signature" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+    <div class="mx-auto max-w-2xl">
+      <p class="text-gray-600 px-4">
+        Per firmare a nome di una azienda, associazione, organizzazione, istituzione inviare una mail a
+        <a class="font-medium text-blue-600 hover:underline" href="mailto:info@stop-piracy-shield.it"
+          >info@stop-piracy-shield.it</a
+        >.
+      </p>
+    </div>
+    <form @submit.prevent="signature" method="POST" class="mx-auto max-w-2xl mt-8 sm:mt-10">
       <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         <div>
           <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">Nome</label>
@@ -124,9 +132,7 @@ const signature = async (event) => {
           </div>
         </div>
         <div class="sm:col-span-2">
-          <label for="org" class="block text-sm font-semibold leading-6 text-gray-900"
-            >Organizzazione / Azienda (opzionale)</label
-          >
+          <label for="org" class="block text-sm font-semibold leading-6 text-gray-900">Affiliazione</label>
           <div class="mt-2.5">
             <input
               type="text"
@@ -188,7 +194,7 @@ const signature = async (event) => {
               d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
             ></path>
           </svg>
-          Processing...
+          Elaborazione in corso...
         </button>
       </div>
     </form>

@@ -46,7 +46,7 @@ const scrollToFirma = () => {
     <header class="mx-auto max-w-2xl pt-2 sm:pt-16 sticky top-0 bg-white" ref="stickyElement">
       <div class="text-center">
         <h1
-          class="font-bold tracking-tight text-gray-900 transition"
+          class="subpixel-antialiased font-bold tracking-tight text-gray-900 transition"
           :class="[isSticky ? ['text-xl', 'sm:text-2xl', 'lg:text-3xl'] : ['text-2xl', 'sm:text-5xl', 'lg:text-6xl']]"
         >
           Lettera aperta contro gli eccessi di Piracy Shield
@@ -87,6 +87,14 @@ const scrollToFirma = () => {
         </section>
       </div>
     </header>
+    <div class="mx-auto max-w-2xl text-justify sm:text-lg pt-1 pb-5 sm:px-6">
+      La piattaforma Piracy Shield, istituito in seguito alla Legge 14 luglio 2023, n. 93 e alla delibera AGCOM
+      189/23/CONS, ha l'obiettivo di contrastare la pirateria online. Tuttavia, presenta problemi di controllo pubblico,
+      inefficacia nel blocco degli indirizzi IP, incidenti e mancanza di trasparenza. Le normative attuali non
+      chiariscono le responsabilità dei segnalatori e gli operatori rischiano sanzioni per errori non intenzionali. Per
+      migliorarlo, sono necessarie riforme tra cui la verifica delle segnalazioni delle aziende private da parte di un
+      ente pubblico, unificare le liste di blocco e limitare i blocchi basati su indirizzi IP.
+    </div>
     <dl class="pt-2 sm:pt-16 flex items-center justify-center gap-x-6 py-8">
       <stats></stats>
     </dl>

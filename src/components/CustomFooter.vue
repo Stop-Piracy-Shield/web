@@ -3,7 +3,7 @@
     <div class="px-12 pt-6 pb-2 text-center">
       <span class="text-sm text-gray-500"
         >Contatti:
-        <a class="font-medium text-blue-600 hover:underline" href="mailito:info@stop-piracy-shield.it"
+        <a class="font-medium text-blue-600 hover:underline" href="mailto:info@stop-piracy-shield.it"
           >info@stop-piracy-shield.it</a
         ></span
       >
