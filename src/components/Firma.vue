@@ -132,7 +132,7 @@ const signature = async (event) => {
           </div>
         </div>
         <div class="sm:col-span-2">
-          <label for="org" class="block text-sm font-semibold leading-6 text-gray-900">Affiliazione</label>
+          <label for="org" class="block text-sm font-semibold leading-6 text-gray-900">Affiliazione (opzionale)</label>
           <div class="mt-2.5">
             <input
               type="text"
