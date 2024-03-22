@@ -87,6 +87,8 @@ const signature = async (event) => {
     </div>
     <div class="mx-auto max-w-2xl">
       <p class="text-gray-600 px-4">
+        Solo il nome, cognome e l'affiliazione personale verranno pubblicati nella lettera. La Email verrà cancellata entro 30 giorni.
+        <br></br><br></br>
         Per firmare a nome di una azienda, associazione, organizzazione, istituzione inviare una mail a
         <a class="font-medium text-blue-600 hover:underline" href="mailto:info@stop-piracy-shield.it"
           >info@stop-piracy-shield.it</a
@@ -157,9 +159,9 @@ const signature = async (event) => {
           <div class="text-sm leading-6">
             <label for="privacy" class="font-medium text-gray-900">Privacy</label>
             <p class="text-gray-500">
-              Accetto l'<a class="font-medium text-blue-600 hover:underline" href="/privacy.pdf"
+              Ho preso visione dell'<a class="font-medium text-blue-600 hover:underline" href="/privacy.pdf"
                 >Informativa sulla privacy</a
-              >
+              > e acconsento al trattamento dei dati
             </p>
           </div>
         </div>
