@@ -4,6 +4,7 @@ import Lettera from '../components/Lettera.vue';
 import Firma from '../components/Firma.vue';
 import Firme from '../components/Firme.vue';
 import Stats from '../components/Stats.vue';
+import Bib from '../components/Bib.vue';
 import CustomFooter from '../components/CustomFooter.vue';
 
 const isSticky = ref(false);
@@ -102,6 +103,7 @@ const scrollToFirma = () => {
     <firme class="mx-auto max-w-2xl" max-item="5"></firme>
   </div>
   <firma class="mx-auto max-w-2xl" ref="firma"></firma>
+  <bib class="mx-auto max-w-2xl"></bib>
   <custom-footer></custom-footer>
 </template>
 

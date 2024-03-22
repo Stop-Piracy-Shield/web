@@ -10,7 +10,7 @@ export default defineConfig({
     },
     proxy: {
       '/api': {
-        target: 'http://stop-piracy-shield.it/api/',
+        target: 'https://stop-piracy-shield.it/api/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },

@@ -50,7 +50,7 @@ const signature = async (event) => {
 </script>
 
 <template>
-  <div class="bg-white px-6 pb-24 sm:pb-32 lg:px-8">
+  <div class="bg-white px-6 pb-6 sm:pb-10 lg:px-8">
     <div
       class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
       aria-hidden="true"
