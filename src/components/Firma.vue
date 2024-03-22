@@ -87,7 +87,7 @@ const signature = async (event) => {
     </div>
     <div class="mx-auto max-w-2xl">
       <p class="text-gray-600 px-4">
-        Solo il nome, cognome e l'affiliazione personale verranno pubblicati nella lettera. La Email verrà cancellata entro 30 giorni.
+        Solo il nome, cognome e l'affiliazione personale verranno pubblicati nella lettera. L'indirizzo email, utilizzato a scopo di verifica di autenticità della firma, verrà cancellato entro 30 giorni.
         <br></br><br></br>
         Per firmare a nome di una azienda, associazione, organizzazione, istituzione inviare una mail a
         <a class="font-medium text-blue-600 hover:underline" href="mailto:info@stop-piracy-shield.it"
