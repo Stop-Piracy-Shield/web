@@ -355,5 +355,11 @@
       <li class="text-justify py-1">Marco Aceti</li>
       <li class="text-justify py-1">Simone Bortolin</li>
     </ul>
+    <h2 class="py-3 sm:py-4 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+      Aziende/Organizzazioni co-firmatarie:
+    </h2>
+    <ul class="list-outside ps-5 list-disc">
+      <li class="text-justify py-1">FibraClick</li>
+    </ul>
   </div>
 </template>
