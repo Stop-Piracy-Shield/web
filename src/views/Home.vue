@@ -56,10 +56,9 @@ const scrollToFirma = () => {
             class="mx-auto max-w-7xl transition px-4"
             :class="[isSticky ? ['sm:px-4', 'lg:px-6'] : ['sm:px-6', 'lg:px-8']]"
           >
-            <a
-              href="#"
+            <button
               @click="scrollToFirma"
-              class="text-white rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 flex items-center justify-between flex-col"
+              class="text-white rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 flex items-center justify-between flex-col custom-button"
               :class="[
                 isSticky
                   ? ['p-3', 'sm:py-5', 'lg:p-7', 'text-l', 'sm:text-xl', 'lg:text-2xl']
@@ -82,7 +81,7 @@ const scrollToFirma = () => {
                   /></svg
                 >&nbsp; Firma anche tu&nbsp;
               </div>
-            </a>
+            </button>
           </div>
         </section>
       </div>
@@ -115,5 +114,10 @@ html {
     font-size 150ms ease,
     padding 150ms ease,
     margin 150ms ease;
+}
+
+.custom-button {
+  appearance: unset;
+  width: 100%;
 }
 </style>
