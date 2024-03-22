@@ -360,6 +360,7 @@
     </h2>
     <ul class="list-outside ps-5 list-disc">
       <li class="text-justify py-1">FibraClick</li>
+      <li class="text-justify py-1">HyperBit SRLs</li>
       <li class="text-justify py-1">Osservatorio Nessuno OdV</li>
     </ul>
   </div>
